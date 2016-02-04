@@ -1,5 +1,17 @@
 {{#if name }}
-  <h1>Welcome, {{ name }}!</h1>
+  <h1>Welcome, {{ name }}! Pants {{pants}}</h1>
 {{else }}
   <h1>Hi there!</h1>    
 {{/if }}
+
+<h3> Creating a Page that lists items via templates </h3>
+
+{{#list people}}{{firstName}}{{lastName}}{{/list}}
+
+{
+	people: [
+	{firstName: "Osama", lastName: "Sehgol"},	
+	{firstName: "Charlie", lastName: "Brown"},
+	{firstName: "Homer", lastName: "Simpson"}
+	]
+}
